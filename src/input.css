@@ -1,3 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {
+
+  @font-face {
+    font-family: 'Figtree', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    src: url('https://fonts.bunny.net/css?family=figtree:300,400,600,700');
+    font-style: normal;
+    font-display: swap;
+}
+
+    html {
+      font-family: "Figtree", sans-serif;
+    }
+
+    h1 {
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-weight: 600;
+        font-size: 1.3rem;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 1.1rem;
+        line-height: 2.1;
+        margin: 18px 0px;
+    }
+  }
+/* Custom class here */
+@layer components {
+    .biru {
+      @apply bg-[#002649]
+    }
+    .kuning {
+        @apply text-[#FFE032]
+    }
+    .lower-underline {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 4px;
+      }
+      .imgfilter {
+        filter: grayscale(100%) invert(100%) contrast(1.5) brightness(1);
+    }
+  }
